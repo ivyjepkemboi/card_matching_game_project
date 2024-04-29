@@ -1,0 +1,81 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e2e1e0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* User interaction area */
+#userInfo {
+    margin-bottom: 20px;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+/* Game container styling */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* Adjust based on card size */
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.flipped, .card.match {
+    background-color: #fff;
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+.card.match {
+    color: #28a745; /* Green for matched cards */
+    animation: matchFade 0.5s;
+}
+
+@keyframes matchFade {
+    from { transform: scale(1.1); }
+    to { transform: scale(1); }
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2, 150px);
+    }
+
+    .card {
+        width: 150px;
+        height: 150px;
+    }
+}
