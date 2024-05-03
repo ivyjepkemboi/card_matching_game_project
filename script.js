@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (flippedCards.length < 2) {
             card.classList.add('flipped');
             card.textContent = card.dataset.value;
+            card.style.background = 'none';
             flippedCards.push(card);
 
             if (flippedCards.length === 2) {
@@ -132,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateScore(newScore);
             flippedCards.forEach(card => {
                 card.classList.remove('flipped');
+                card.style.backgroundImage = "url('./back.jpg')";
                 card.textContent = '';
             });
             flippedCards = [];

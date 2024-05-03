@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function flipCard(card) {
         if (flippedCards.length < 2) {
             card.classList.add('flipped');
+            card.style.backgroundImage = "none"; 
             card.textContent = card.dataset.value;
             flippedCards.push(card);
 

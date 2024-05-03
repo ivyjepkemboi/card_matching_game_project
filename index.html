@@ -12,9 +12,13 @@
         <button id="startButton">Start Game</button>
         <button onclick="window.location.href='instructions.html';">How to Play</button> <!-- How to Play button -->
     </div>
-    <div id="userDisplay">Player: </div>
-    <div id="scoreDisplay">Score: 0</div>
-    <div id="timerDisplay">Time: 00:00</div>
+    <div class="indicators">
+        <ul>
+        <li><div id="userDisplay">Player: </div></li>
+        <li><div id="scoreDisplay">Score: 0</div></li>
+        <li><div id="timerDisplay">Time: 00:00</div></li> 
+        </ul>
+    </div>
  <div id="gameContainer" class="game-container"></div>
     <script src="./script.js"></script>
 </body>
